@@ -24,7 +24,7 @@ default: &default
 development:
   <<: *default
   database: rails-garden-manager_development
-  url: <%= ENV['POSTGRESQL_ADDON_URI'] %>
+
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -84,3 +84,4 @@ production:
   database: rails-garden-manager_production
   username: rails-garden-manager_production
   password: <%= ENV['rails-garden-manager_DATABASE_PASSWORD'] %>
+  url: <%= ENV['POSTGRESQL_ADDON_URI'] %>
